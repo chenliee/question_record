@@ -18,10 +18,11 @@
 >markmap:
 >  colorFreezeLevel: 2
 >---
->>
+>
 >========================
 ># 2024.01.06
->1. tabController addListen会导致一次点击监听2次 >可以用indexChange判断,但滑动不会让indexChange变为false，滑动只是动画 不会影响索引
+>1. tabController  addListen会导致一次点击监听2次可以用indexChange判断
+>   但滑动不会让indexChange变为false，滑动只是动画 不会影响索引
 >2. 
 >
 ># 2024.12.27
@@ -45,64 +46,157 @@
 >2. 解决11.21问题 是因为swagger-ui-dist
 >
 ># 2024.11.21
->1. midwayjs query参数因为swagger版本问题，用3.15.1解决,后面出现了filter=[]>sb这样的参数也是因为版本问题，但是没有找到具体哪个插件版本
+>1. midwayjs query参数因为swagger版本问题，
+>  用3.15.1解决,后面出现了filter=[]>  sb这样的参数也是因为版本问题，但是没有找到具体哪个插件版本
 >
 ># 2024.9.29
 >1. 如果在不該用的小部件裡面使用了expanded，debug模式只會警告，但是release模式會導致視圖無法渲染
 >   ```
->   [+34470 ms] I/flutter (31195): type 'FlexParentData' is not a subtype of type 'StackParentData' in type >cast
->[   +1 ms] I/flutter (31195): #0      Positioned.applyParentData (package:flutter/src/widgets/>basic.dart:4345)
->[        ] I/flutter (31195): #1      RenderObjectElement._updateParentData (package:flutter/src/widgets/>framework.dart:6553)
->[        ] I/flutter (31195): #2      RenderObjectElement.attachRenderObject (package:flutter/src/widgets/>framework.dart:6594)
->[        ] I/flutter (31195): #3      RenderObjectElement.mount (package:flutter/src/widgets/>framework.dart:6458)
->[        ] I/flutter (31195): #4      MultiChildRenderObjectElement.mount (package:flutter/src/widgets/>framework.dart:6900)
->[        ] I/flutter (31195): #5      Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
->[        ] I/flutter (31195): #6      Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
->[   +1 ms] I/flutter (31195): #7      ComponentElement.performRebuild (package:flutter/src/widgets/>framework.dart:5505)
->[        ] I/flutter (31195): #8      Element.rebuild (package:flutter/src/widgets/framework.dart:5196)
->[        ] I/flutter (31195): #9      ComponentElement._firstBuild (package:flutter/src/widgets/>framework.dart:5462)
->[        ] I/flutter (31195): #10     ComponentElement.mount (package:flutter/src/widgets/>framework.dart:5456)
->[        ] I/flutter (31195): #11     Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
->[        ] I/flutter (31195): #12     Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
->[        ] I/flutter (31195): #13     ComponentElement.performRebuild (package:flutter/src/widgets/>framework.dart:5505)
->[        ] I/flutter (31195): #14     Element.rebuild (package:flutter/src/widgets/framework.dart:5196)
->[   +1 ms] I/flutter (31195): #15     ComponentElement._firstBuild (package:flutter/src/widgets/>framework.dart:5462)
->[        ] I/flutter (31195): #16     ComponentElement.mount (package:flutter/src/widgets/>framework.dart:5456)
->[        ] I/flutter (31195): #17     Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
->[        ] I/flutter (31195): #18     MultiChildRenderObjectElement.inflateWidget (package:flutter/src/>widgets/framework.dart:6893)
->[        ] I/flutter (31195): #19     MultiChildRenderObjectElement.mount (package:flutter/src/widgets/>framework.dart:6905)
->[        ] I/flutter (31195): #20     Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
->[        ] I/flutter (31195): #21     Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
->[        ] I/flutter (31195): #22     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/>framework.dart:6758)
->[        ] I/flutter (31195): #23     Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
->[        ] I/flutter (31195): #24     Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
->[        ] I/flutter (31195): #25     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/>framework.dart:6758)
->[        ] I/flutter (31195): #26     Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
->[        ] I/flutter (31195): #27     Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
->[        ] I/flutter (31195): #28     ComponentElement.performRebuild (package:flutter/src/widgets/>framework.dart:5505)
->[        ] I/flutter (31195): #29     Element.rebuild (package:flutter/src/widgets/framework.dart:5196)
->[        ] I/flutter (31195): #30     ComponentElement._firstBuild (package:flutter/src/widgets/>framework.dart:5462)
->[        ] I/flutter (31195): #31     ComponentElement.mount (package:flutter/src/widgets/>framework.dart:5456)
->[        ] I/flutter (31195): #32     Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
->[        ] I/flutter (31195): #33     Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
->[        ] I/flutter (31195): #34     ComponentElement.performRebuild (package:flutter/src/widgets/>framework.dart:5505)
->[        ] I/flutter (31195): #35     Element.rebuild (package:flutter/src/widgets/framework.dart:5196)
->[        ] I/flutter (31195): #36     ComponentElement._firstBuild (package:flutter/src/widgets/>framework.dart:5462)
->[        ] I/flutter (31195): #37     ComponentElement.mount (package:flutter/src/widgets/>framework.dart:5456)
->[        ] I/flutter (31195): #38     Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
->[        ] I/flutter (31195): #39     Element.updateChild (package:flutter/src/widgets/framework.dart:3840)
->[        ] I/flutter (31195): #40     ComponentElement.performRebuild (package:flutter/src/widgets/>framework.dart:5505)
->[        ] I/flutter (31195): #41     StatefulElement.performRebuild (package:flutter/src/widgets/>framework.dart:5643)
->[        ] I/flutter (31195): #42     Element.rebuild (package:flutter/src/widgets/framework.dart:5196)
->[        ] I/flutter (31195): #43     BuildOwner.buildScope (package:flutter/src/widgets/>framework.dart:2904)
->[        ] I/flutter (31195): #44     WidgetsBinding.drawFrame (package:flutter/src/widgets/>binding.dart:989)
->[        ] I/flutter (31195): #45     RendererBinding._handlePersistentFrameCallback (package:flutter/src/>rendering/binding.dart:448)
->[        ] I/flutter (31195): #46     SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/>binding.dart:1386)
->[        ] I/flutter (31195): #47     SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/>binding.dart:1311)
->[        ] I/flutter (31195): #48     SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/>binding.dart:1169)
->[        ] I/flutter (31195): #49     _invoke (dart:ui/hooks.dart:312)
->[        ] I/flutter (31195): #50     PlatformDispatcher._drawFrame (dart:ui/platform_dispatcher.dart:399)
->[        ] I/flutter (31195): #51     _drawFrame (dart:ui/hooks.dart:283)
+>   [+34470 ms] I/flutter (31195): type 'FlexParentData' is not a subtype 
+>   of type 'StackParentData' in type >cast
+>[   +1 ms] I/flutter (31195): #0     
+> Positioned.applyParentData (package:flutter/src/widgets/>basic.dart:4345)
+>[        ] I/flutter (31195): #1     
+> RenderObjectElement._updateParentData (package:flutter/src/widgets/>framework.dart:6553)
+>[        ] I/flutter (31195): #2     
+>RenderObjectElement.attachRenderObject (package:flutter/src/widgets/>framework.dart:6594)
+>[        ] I/flutter (31195): #3     
+>RenderObjectElement.mount (package:flutter/src/widgets/>framework.dart:6458)
+>[        ] I/flutter (31195): #4     
+>MultiChildRenderObjectElement.mount (package:flutter/src/widgets/>framework.dart:6900)
+>[        ] I/flutter (31195): #5      
+>Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
+>
+>[        ] I/flutter (31195): #6      
+>Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
+>
+>[   +1 ms] I/flutter (31195): #7      
+>ComponentElement.performRebuild (package:flutter/src/widgets/>framework.dart:5505)
+>
+>[        ] I/flutter (31195): #8      
+>Element.rebuild (package:flutter/src/widgets/framework.dart:5196)
+>[        ] I/flutter (31195): #9      
+>ComponentElement._firstBuild (package:flutter/src/widgets/>framework.dart:5462)
+>
+>[        ] I/flutter (31195): #10     
+>ComponentElement.mount (package:flutter/src/widgets/>framework.dart:5456)
+>
+>[        ] I/flutter (31195): #11     
+>Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
+>
+>[        ] I/flutter (31195): #12     
+>Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
+>
+>[        ] I/flutter (31195): #13     
+>ComponentElement.performRebuild (package:flutter/src/widgets/>framework.dart:5505)
+>
+>[        ] I/flutter (31195): #14     
+>Element.rebuild (package:flutter/src/widgets/framework.dart:5196)
+>[   +1 ms] I/flutter (31195): #15     
+>ComponentElement._firstBuild (package:flutter/src/widgets/>framework.dart:5462)
+>
+>[        ] I/flutter (31195): #16     
+>ComponentElement.mount (package:flutter/src/widgets/>framework.dart:5456)
+>
+>[        ] I/flutter (31195): #17     
+>Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
+>
+>[        ] I/flutter (31195): #18     
+>MultiChildRenderObjectElement.inflateWidget (package:flutter/src/>widgets/framework.dart:6893)
+>
+>[        ] I/flutter (31195): #19     
+>MultiChildRenderObjectElement.mount (package:flutter/src/widgets/>framework.dart:6905)
+>
+>[        ] I/flutter (31195): #20     
+>Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
+>
+>[        ] I/flutter (31195): #21     
+>Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
+>
+>[        ] I/flutter (31195): #22     
+>SingleChildRenderObjectElement.mount (package:flutter/src/widgets/>framework.dart:6758)
+>
+>[        ] I/flutter (31195): #23     
+>Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
+>
+>[        ] I/flutter (31195): #24     
+>Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
+>
+>[        ] I/flutter (31195): #25     
+>SingleChildRenderObjectElement.mount (package:flutter/src/widgets/>framework.dart:6758)
+>
+>[        ] I/flutter (31195): #26     
+>Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
+>
+>[        ] I/flutter (31195): #27     
+>Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
+>
+>[        ] I/flutter (31195): #28     
+>ComponentElement.performRebuild (package:flutter/src/widgets/>framework.dart:5505)
+>
+>[        ] I/flutter (31195): #29     
+>Element.rebuild (package:flutter/src/widgets/framework.dart:5196)
+>[        ] I/flutter (31195): #30     
+>ComponentElement._firstBuild (package:flutter/src/widgets/>framework.dart:5462)
+>
+>[        ] I/flutter (31195): #31     
+>ComponentElement.mount (package:flutter/src/widgets/>framework.dart:5456)
+>
+>[        ] I/flutter (31195): #32     
+>Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
+>
+>[        ] I/flutter (31195): #33     
+>Element.updateChild (package:flutter/src/widgets/framework.dart:3846)
+>
+>[        ] I/flutter (31195): #34     
+>ComponentElement.performRebuild (package:flutter/src/widgets/>framework.dart:5505)
+>
+>[        ] I/flutter (31195): #35     
+>Element.rebuild (package:flutter/src/widgets/framework.dart:5196)
+>[        ] I/flutter (31195): #36     
+>ComponentElement._firstBuild (package:flutter/src/widgets/>framework.dart:5462)
+>
+>[        ] I/flutter (31195): #37     
+>ComponentElement.mount (package:flutter/src/widgets/>framework.dart:5456)
+>
+>[        ] I/flutter (31195): #38     
+>Element.inflateWidget (package:flutter/src/widgets/>framework.dart:4335)
+>
+>[        ] I/flutter (31195): #39     
+>Element.updateChild (package:flutter/src/widgets/framework.dart:3840)
+>
+>[        ] I/flutter (31195): #40     
+>ComponentElement.performRebuild (package:flutter/src/widgets/>framework.dart:5505)
+>
+>[        ] I/flutter (31195): #41     
+>StatefulElement.performRebuild (package:flutter/src/widgets/>framework.dart:5643)
+>
+>[        ] I/flutter (31195): #42     
+>Element.rebuild (package:flutter/src/widgets/framework.dart:5196)
+>[        ] I/flutter (31195): #43     
+>BuildOwner.buildScope (package:flutter/src/widgets/>framework.dart:2904)
+>
+>[        ] I/flutter (31195): #44     
+>WidgetsBinding.drawFrame (package:flutter/src/widgets/>binding.dart:989)
+>
+>[        ] I/flutter (31195): #45     
+>RendererBinding._handlePersistentFrameCallback (package:flutter/src/>rendering/binding.dart:448)
+>
+>[        ] I/flutter (31195): #46     
+>SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/>binding.dart:1386)
+>
+>[        ] I/flutter (31195): #47     
+>SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/>binding.dart:1311)
+>
+>[        ] I/flutter (31195): #48     
+>SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/>binding.dart:1169)
+>
+>[        ] I/flutter (31195): #49     
+>_invoke (dart:ui/hooks.dart:312)
+>[        ] I/flutter (31195): #50     
+>PlatformDispatcher._drawFrame (dart:ui/platform_dispatcher.dart:399)
+>[        ] I/flutter (31195): #51     
+>_drawFrame (dart:ui/hooks.dart:283)
 >[        ] I/flutter (31195): Another exception was thrown: Instance of 'DiagnosticsProperty<void>'
 >   ```
 >
@@ -136,7 +230,8 @@
 >		cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 >		path = 
 >	[mergetool "sourcetree"]
->		cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor >\"$BASE\" -merge \"$MERGED\"
+>		cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh 
+>		\"$LOCAL\" \"$REMOTE\" -ancestor >\"$BASE\" -merge \"$MERGED\"
 >		trustExitCode = true
 >	[commit]
 >		template = /Users/admin/.stCommitMsg
@@ -266,7 +361,8 @@
 >   ```
 >
 ># 2024.5.29
->1. List涉及到对象的时候需要用 List.form(res.map((e)=>e).toList)来深拷贝，如果涉及到behavior >subject需要用到encode和decode
+>1. List涉及到对象的时候需要用 List.form(res.map((e)=>e).toList)来深拷贝，
+>.  如果涉及到behavior >subject需要用到encode和decode
 >
 ># 2024.5.28
 >1. flutter for web 调get请求报错
@@ -301,9 +397,11 @@
 ># 2024.5.17
 >1. ```
 >[        ] Could not build the precompiled application for the device.
->[   +1 ms] Uncategorized (Xcode): Timed out waiting for all destinations matching the provided destination >specifier to become available
+>[   +1 ms] Uncategorized (Xcode):Timed out waiting for all destinations matching the provided 
+>          destination >specifier to become available
 >           	Ineligible destinations for the "Runner" scheme:
->           		{ platform:iOS, arch:arm64, id:00008020-001149943428003A, name:1, error:Device is busy (>Preparing 1) }
+>           		{ platform:iOS, arch:arm64, id:00008020-001149943428003A, name:1, 
+>           		error:Device is busy (>Preparing 1) }
 >   ```
 >2. apple-app-site-association配置要放在域名或者.well-known下
 >3. universal link依赖iOS系统去官网下载配置的associate文件。这个时间是不可控的
@@ -351,7 +449,8 @@
 >1. fittedBox可以讓組件縮小且佔用空間也縮小，transform只縮小視角
 >
 ># 2024.5.13
->1. [Cycle inside Runner; building could produce unreliable results.] 移动enable fundation extension到copy >resource上
+>1. [Cycle inside Runner; building could produce unreliable results.] 
+>   移动enable fundation extension到copy >resource上
 >   因为更新xcode15，然后携带之前小组件的问题？
 >2. 后面报错找不到Pod Runner 删除ios文件夹重新生成
 >
@@ -394,15 +493,21 @@
 >    ```
 >3. 另一個項目報 无效的源发行版：17，昨天的項目可以運行，修改了一會，昨天的項目也無法運行了
 >   进入android项目修改 可运行但是在flutter项目下无法运行
->   在gradle.properties配置 [org.gradle.java.home=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home]>解決
+>   在gradle.properties配置 
+>   [org.gradle.java.home=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home]>解決
 >4. ```
->    [   +1 ms] You are applying Flutter's app_plugin_loader Gradle plugin imperatively using the apply >script method, which is deprecated. and will be removed in a future release. Migrate to applying >Gradle plugins with the declarative plugins block: https://flutter.dev/go/flutter-gradle-plugin-apply
+>    [   +1 ms] You are applying Flutter's app_plugin_loader Gradle plugin imperatively u
+>    sing the apply >script method, which is deprecated. and will be removed in a future release. 
+>    Migrate to applying >
+>    Gradle plugins with the declarative plugins block: https://flutter.dev/go/flutter-gradle-plugin-apply
 >	[        ] FAILURE: Build failed with an exception.
 >	[        ] * What went wrong:
 >	[        ] A problem occurred configuring root project 'android'.
 >	[        ] > Could not resolve all dependencies for configuration ':classpath'.
->	[        ]    > Could not create service of type OutputFilesRepository using >ExecutionGradleServices.createOutputFilesRepository().
->	[        ]       > Cannot lock Build Output Cleanup Cache (/Users/admin/Desktop/project/flutter_member/>android/.gradle/buildOutputCleanup) as it has already been locked by this process.
+>	[        ]    > Could not create service of type OutputFilesRepository using 
+>	ExecutionGradleServices.createOutputFilesRepository().
+>	[        ]       > Cannot lock Build Output Cleanup Cache (/Users/admin/Desktop/project/
+>	flutter_member/>android/.gradle/buildOutputCleanup) as it has already been locked by this process.
 >	```
 >	进入/.gradle删除所有.lock文件 => flutter clean => flutter pub get
 >5.
@@ -451,9 +556,11 @@
 >      	TXIMSDK_Plus_iOS (>= 7.9.5680)
 >
 >	You have either:
-> 	* out-of-date source repos which you can update with `pod repo update` or with `pod install >--repo-update`.
-> 	* changed the constraints of dependency `TXIMSDK_Plus_iOS` inside your development pod `>tencent_cloud_chat_sdk`.
->   	You should run `pod update TXIMSDK_Plus_iOS` to apply changes you've made.
+> 	* out-of-date source repos which you can
+>    update with `pod repo update` or with `pod install >--repo-update`.
+> 	* changed the constraints of dependency `TXIMSDK_Plus_iOS` 
+> 	  inside your development pod `>tencent_cloud_chat_sdk`.
+>   You should run `pod update TXIMSDK_Plus_iOS` to apply changes you've made.
 >5. Exception: Could not create Impeller texture.
 >6. io.worker.1 (16): EXC_BAD_ACCESS (code=1, address=0x0)
 >   [->  0x10c56a250 <+164>: ldr    x8, [x0]]
@@ -481,8 +588,8 @@
 >	[Failed assertion: line 257 pos 16: 'child == null || indexOf(child) > index': is not true.]
 >
 >
->----------------------------------------------------------------------------------------------------------->----------------
->----------------------------------------------------------------------------------------------------------->----------------
+>----------------------------------------------------------------------------------------------------------
+>----------------------------------------------------------------------------------------------------------
 ># git
 >1. git commit --amend [追加提交]
 >
@@ -508,24 +615,29 @@
 >    git update-index --no-assume-unchanged 取消假定
 >    git ls-files -v | grep ^[[:lower:]] 查看取消跟蹤列表，報錯需setopt no_nomatch
 >16.     
->----------------------------------------------------------------------------------------------------------->----------------
+>----------------------------------------------------------------------------------------------------------
 ># jks
->1. keytool -genkey -v -keystore ~/pushTest.jks -keyalg RSA -keysize 2048 -validity 10000 -alias pushTest >-storetype jks
->2. keytool -genkeypair -v -keystore your_keystore_name.keystore -keyalg RSA -keysize 2048 -validity 3650 >-alias your_alias_name
+>1. keytool -genkey -v -keystore ~/pushTest.jks -keyalg RSA 
+>   -keysize 2048 -validity 10000 -alias pushTest storetype jks
+>2. keytool -genkeypair -v -keystore your_keystore_name.keystore 
+>   -keyalg RSA -keysize 2048 -validity 3650 alias your_alias_name
 >3. ./gradlew signingReport
->4. keytool -importkeystore -srckeystore /your-path/demo.jks -srcstoretype JKS -deststoretype PKCS12 >-destkeystore /your-path/client.p12
->5. keytool -importkeystore -srckeystore /your-path/client.p12 -srcstoretype PKCS12 -destkeystore /your-path>/demo.keystore -deststoretype JKS
->6. keytool -importkeystore -srckeystore ./pushTest.jks -srcstoretype JKS -deststoretype PKCS12 >-destkeystore ./client.p12 
+>4. keytool -importkeystore -srckeystore /your-path/demo.jks 
+>-srcstoretype JKS -deststoretype PKCS12 destkeystore /your-path/client.p12
+>5. keytool -importkeystore -srckeystore /your-path/client.p12 
+>-srcstoretype PKCS12 -destkeystore /your-path>/demo.keystore -deststoretype JKS
+>6. keytool -importkeystore -srckeystore ./pushTest.jks 
+>-srcstoretype JKS -deststoretype PKCS12 destkeystore ./client.p12 
 >7. adb shell dumpsys package d 查看android applinks 
->----------------------------------------------------------------------------------------------------------->----------------
+>----------------------------------------------------------------------------------------------------------
 ># SHA1
 >1. keytool -list -v -keystore 你的keystore文件的绝对路径 
->----------------------------------------------------------------------------------------------------------->----------------
+>----------------------------------------------------------------------------------------------------------
 ># 安装brew
 >1. /bin/bash -c "$(curl -fsSL raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 >2. brew install jq [安装jq]
->
->
+>----------------------------------------------------------------------------------------------------------
+
 >org.gradle.jvmargs=-Xmx1536M
 >android.useAndroidX=true
 >android.enableJetifier=true
