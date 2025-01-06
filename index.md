@@ -20,6 +20,10 @@ markmap:
 ---
 >
 ========================
+# 2024.01.06
+1. tabController addListen会导致一次点击监听2次 可以用indexChange判断,但滑动不会让indexChange变为false，滑动只是动画 不会影响索引
+2. 
+
 # 2024.12.27
 1. BackdropFilter模糊器需要加到ClipRect里 才可以避免全屏模糊
 
