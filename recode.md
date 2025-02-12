@@ -1,21 +1,24 @@
 
-    ### 12.18-1.18（225.64+265.26）
-
-	949.81           947.81
-	311.75                    24.56
-
-	65                        65
-
-	39.81 	                  39.81 
-
-	9.99 	                  9.99
-
-	 	                      18.6
-
-	523.26（522.27） 	      787.84
-
-
-
+| Date              | Income                |
+| ------------------| ----------------------         |
+| 12.18 - 01.18     | 225.64 + 265.26                |
+| 11.18 - 12.18     | 194.1 + 107.18 + 418           |
+| 10.18 - 11.18     | 351.48 + 51.96                 |
+| 09.18 - 10.18     | 314.61 + 258.69                |
+| 08.18 - 09.18     | 383.86 + 145.6                 |
+| 07.18 - 08.18     | 521.29 + 24.04                 |
+| 06.18 - 07.18     | 354.9 + 59.49 + 4.36           |
+| 05.18 - 06.18     | 352.95 + 68.96                 |
+| 04.18 - 05.18     | 424.37.                        |
+| 03.18 - 04.18     | 378 + 124.49 + 1 (-120-925)    |
+| 02.18 - 03.18     | 373.00 + 103.99                |
+| 01.18 - 02.18     | 75 + 119.04 + 15.32 + 19.9     |
+| 12.18 - 01.18     | 357.77                         |
+| 11.18 - 12.18     | 182.2 + 47.2 + 65              |
+| 10.18 - 11.18     | 387.89                         |
+| 09.18 - 10.18     | 222.43                         | 
+| 08.18 - 09.18     | 373.51                         |
+| 07.18 - 08.18     | 339                            |
 
 '{"out_trans_id":"7aeafea6-44ef-471a-9e1b-910edf65017e","subject":"商城訂單","body":"商城訂單","total_fee":"24.90","currency":"MOP","extend_params":"{\"sub_merchant_id\":\"888534816893228\",\"sub_merchant_name\":\"生活優品零售集團有限公司\",\"sub_merchant_industry\":\"4816\"}","notify_url":"https://gateway.uat.heyday-catering.com/payment/notify/goody/makmakshop/mpay/7aeafea6-44ef-471a-9e1b-910edf65017e","it_b_pay":"1h","pay_channel":"mpay","product_code":"MP_APP_PAY","service":"mpay.trade.mobile.pay","org_id":"888534816893228","channel_type":"1","format":"JSON","timestamp":"1690355805953","nonce_str":"93008ed22e697b6b4f417bc43de14c13108d29b5","version":"1.1.0","sign_type":"RSA","sign":"D7hLwH7nXX/+K1MpAX04+eaoxP775QyROsp4Xf9qyG7Mj4t0A8Eo1Ye28lCsnFiRHVXuUwrwhRZi92JRamU0vV7KieHclTjXXfcJwd75aJSj/vA1GSqypJ6+MsivKs9kjyudk0lHF9hccjklXioxi8j3YQe+CijapaOG5qDEG/V12yw1nTDLpu2+DMhXXAsV+P9hXrp73sRu7vfxsFPzJ4eUh/FSk4kuE6CHU8r4AyNp6chl0NR1J5F00CceTIQQgr/fzkhnGNx4fMqjKB+NqvtLart9okg5vbzxp0QJDWkuDeD26wHYxLa+js6Xm1Nhe6ONuasoHtE46uJc7BwBdw=="}'
 
