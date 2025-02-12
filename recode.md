@@ -1,4 +1,22 @@
 
+    ### 12.18-1.18（225.64+265.26）
+
+	949.81           947.81
+	311.75                    24.56
+
+	65                        65
+
+	39.81 	                  39.81 
+
+	9.99 	                  9.99
+
+	 	                      18.6
+
+	523.26（522.27） 	      787.84
+
+
+
+
 '{"out_trans_id":"7aeafea6-44ef-471a-9e1b-910edf65017e","subject":"商城訂單","body":"商城訂單","total_fee":"24.90","currency":"MOP","extend_params":"{\"sub_merchant_id\":\"888534816893228\",\"sub_merchant_name\":\"生活優品零售集團有限公司\",\"sub_merchant_industry\":\"4816\"}","notify_url":"https://gateway.uat.heyday-catering.com/payment/notify/goody/makmakshop/mpay/7aeafea6-44ef-471a-9e1b-910edf65017e","it_b_pay":"1h","pay_channel":"mpay","product_code":"MP_APP_PAY","service":"mpay.trade.mobile.pay","org_id":"888534816893228","channel_type":"1","format":"JSON","timestamp":"1690355805953","nonce_str":"93008ed22e697b6b4f417bc43de14c13108d29b5","version":"1.1.0","sign_type":"RSA","sign":"D7hLwH7nXX/+K1MpAX04+eaoxP775QyROsp4Xf9qyG7Mj4t0A8Eo1Ye28lCsnFiRHVXuUwrwhRZi92JRamU0vV7KieHclTjXXfcJwd75aJSj/vA1GSqypJ6+MsivKs9kjyudk0lHF9hccjklXioxi8j3YQe+CijapaOG5qDEG/V12yw1nTDLpu2+DMhXXAsV+P9hXrp73sRu7vfxsFPzJ4eUh/FSk4kuE6CHU8r4AyNp6chl0NR1J5F00CceTIQQgr/fzkhnGNx4fMqjKB+NqvtLart9okg5vbzxp0QJDWkuDeD26wHYxLa+js6Xm1Nhe6ONuasoHtE46uJc7BwBdw=="}'
 
 {"service":"mpay.trade.mobile.pay","org_id":"888534816893228","channel_type":"1","version":"1.1.0","timestamp":"1690355954225","nonce_str":"eiStXNAEFKZM6TW2Rg1C0nBowUuPYxy5","format":"JSON","extend_params":"{\"sub_merchant_name\":\"生活優品零售集團有限公司\",\"sub_merchant_id\":\"888534816893228\",\"sub_merchant_industry\":\"4816\"}","out_trans_id":"4224612000060006","pay_channel":"mpay","total_fee":"24.90","body":"0023-cy","subject":"0023-cy","currency":"MOP","product_code":"MP_APP_PAY","it_b_pay":"1h","passback_parameters":"company_id%3D1%26pay_type%3Dmpayapp%26order_id%3D4224611000090006","notify_url":"https:\/\/gateway.uat.heyday-catering.com\/api\/payment_makmakshop\/mpay\/notify","return_url":"","sign":"gFmv5oAnlPDnuaeWG0gJl2tivyn51yhFVt5jVM47Knku2Q1+klTVI3YFoO+RozcqNVio69ecIcSFmgf4IZICm3bumXrqy1wZ20z2vy\/Gk4zLkcurmxR4ZrOJxWEcvef+50ytothnHsYdyocn\/0F5z0fzGleU7YKb2IqkfVg3Sw4ZrsoinSC7mfU05scvyufTUJ7O49RgQLEXKC1pIr\/16+cgiNfrqY9RKMNCqx3TWeZUYxhqTuewD2nWOsRV++HjuZlsL7iQUAGFd6FRSNsecwPGOFzSugxYnlxO\/RHGIde7Xx1CROXpH'{"out_trans_id":"f6c2d4c8-a70b-464c-b46b-94b69303c3e3","subject":"商城訂單","body":"商城訂單","total_fee":"24.90","currency":"MOP","extend_params":"{\"sub_merchant_id\":\"888534816893228\",\"sub_merchant_name\":\"生活優品零售集團有限公司\",\"sub_merchant_industry\":\"4816\"}","notify_url":"https://gateway.dev.heyday-catering.com:20443/payment/notify/goody/makmakshop/mpay/f6c2d4c8-a70b-464c-b46b-94b69303c3e3","it_b_pay":"1h","pay_channel":"mpay","product_code":"MP_APP_PAY","service":"mpay.trade.mobile.pay","org_id":"888534816893228","channel_type":"1","format":"JSON","timestamp":"1690427559536","nonce_str":"f5d3db6c1bb17a2b688fa988ecd8816a05b2db41","version":"1.1.0","sign_type":"RSA2","sign":"zZ2/doyaZa8TKgwwLONXDER7xm5n3mIIENOIhvpK3SGBKv9DRtPq3LTktFG3R49lWdEj0u/WOWY/GNQeMzBsRA7rv1q8VA+T9ns2AyzGTG85y9lk30nFgMVrinDoQ8AMd/E1Y+KT9WPzOn8hrpk6KUgDLBao2MkSVkml4hBIpnMXU6YJh0Eu/kQrXhIs6HNu17N/0RDTQb9mQweCHiKl2v6zvE0LKlHlshBjwhfODsKmzfwsx+C7VsqaGCYnioA99r8Tu4H9Pdg/u/kcAsuX02opmHXt1wh8scHjvHU6qV78/r0rQP/9I+twYr27Tj/kXUuhmHsfWhZF3AJwsumELg=="}'

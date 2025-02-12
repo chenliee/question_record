@@ -20,6 +20,8 @@
 >---
 >
 > ========================
+> # 2025.02.
+> 
 > # 2025.02.07
 > 1. flutter跨平台時用了 html等庫需要 判斷是否為web平台 才引入
 > 2. 多模塊開發時 如果用了intl，需要使用multiple_localization
@@ -65,16 +67,18 @@
 > # 2025.01.21
 > 1. 如果定義命名路由的時候 不用const修飾路由，比如直接將參數放在類上，會導致textfield可以影響該頁面的重建
 >   ```
->   Path(Path.restaurantBookPage,
->       (context, match, arguments) => const BookPage())
->   Path(
->       Path.restaurantBookPage,
->       (context, match, arguments) => BookPage(
->             restaurant: arguments['restaurant'],
->             restaurantNo: arguments['restaurantNo'],
->           )),    
->    ```
->  
+> 	Path(Path.restaurantBookPage,
+>  	(context, match, arguments) => const BookPage())
+> 	Path(
+>  	Path.restaurantBookPage,
+>  	(context, match, arguments) => BookPage(
+>        	restaurant: arguments['restaurant'],
+>        	restaurantNo: arguments['restaurantNo'],
+>      	)),       
+> 	```
+> 2. 场景： 键盘弹起的时候执行了showBottomSheet会导致 
+>    使用ModalRoute.of(context)!.settings.arguments as Map<String, dynamic> 重建
+>    用Get.arguments 则不会
 >
 > # 2025.01.07
 > 1. 权限配置ios 需要配置3处
@@ -675,8 +679,9 @@
 > 15. git update-index --assume-unchanged 假定文件从不修改
 >     git update-index --no-assume-unchanged 取消假定
 >     git ls-files -v | grep ^[[:lower:]] 查看取消跟蹤列表，報錯需setopt no_nomatch
-> 16.     
+> 
 > ----------------------------------------------------------------------------------------------------------
+>
 > # jks
 > 1. keytool -genkey -v -keystore ~/pushTest.jks -keyalg RSA 
 >    -keysize 2048 -validity 10000 -alias pushTest storetype jks
@@ -690,27 +695,33 @@
 > 6. keytool -importkeystore -srckeystore ./pushTest.jks 
 > -srcstoretype JKS -deststoretype PKCS12 destkeystore ./client.p12 
 > 7. adb shell dumpsys package d 查看android applinks 
+> 
 > ----------------------------------------------------------------------------------------------------------
+>
 > # SHA1
 > 1. keytool -list -v -keystore 你的keystore文件的绝对路径 
+> 
 > ----------------------------------------------------------------------------------------------------------
+>
+>
 > # 安装brew
 > 1. /bin/bash -c "$(curl -fsSL raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 > 2. brew install jq [安装jq]
+> 
 > ----------------------------------------------------------------------------------------------------------
+>
 > 
-> org.gradle.jvmargs=-Xmx1536M
-> android.useAndroidX=true
-> android.enableJetifier=true
-> org.gradle.java.home=/Users/chen/Desktop/java/jdk-17.0.12.jdk/Contents/Home
-> adb shell pm set-app-links --package com.catchgold.ezfun 0 all
-> adb shell pm verify-app-links --re-verify com.catchgold.ezfun
-> 
-> 
-> 
-> 
-> 
-> 
+> 1. org.gradle.jvmargs=-Xmx1536M
+> 2. android.useAndroidX=true
+> 3. android.enableJetifier=true
+> 4. org.gradle.java.home=/Users/chen/Desktop/java/jdk-17.0.12.jdk/Contents/Home
+> 5. adb shell pm set-app-links --package com.catchgold.ezfun 0 all
+> 6. adb shell pm verify-app-links --re-verify com.catchgold.ezfun2> 
+>
+>
+>
+>
+>
 > 
 > 
 > 
